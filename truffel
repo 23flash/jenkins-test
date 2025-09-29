@@ -10,7 +10,7 @@ pipeline {
       steps {
         echo 'Installing..'
         sh '''
-               "apt update "
+               "apt-get update "
                "apt install curl" 
                "curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin"
                 '''
