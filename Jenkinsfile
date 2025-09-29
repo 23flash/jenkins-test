@@ -1,9 +1,10 @@
 pipeline {
-  agent { 
-        node {
-            label 'jenkins-agent-jdk17'
-            }
-      }
+  agent {
+    node {
+      label 'jenkins-agent-jdk17'
+    }
+
+  }
   stages {
     stage('Build') {
       steps {
