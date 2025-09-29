@@ -1,0 +1,37 @@
+pipeline {
+  agent {
+    node {
+      label 'jenkins-agent-jdk17'
+    }
+
+  }
+  stages {
+    stage('Install') {
+      steps {
+        echo 'Installing..'
+        sh '''
+               " " 
+                '''
+      }
+    }
+
+    stage('Test') {
+      steps {
+        echo 'Testing..'
+        sh '''
+                echo "doing test stuff.."
+                '''
+      }
+    }
+
+    stage('Result') {
+      steps {
+        echo 'Deliver....'
+        sh '''
+                echo "doing delivery stuff.."
+                '''
+      }
+    }
+
+  }
+}
